@@ -25,7 +25,7 @@ public class GatewayApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GatewayApplication.class, args);
-        LOG.info("初始化网关完成！");
+        LOG.info("初始化网关完成！！");
     }
 
     /**
