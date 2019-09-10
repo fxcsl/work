@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sinovatio.owls.business.demo.dao.UserDao">
+	<resultMap id="BaseResultMap" type="com.sinovatio.owls.business.demo.entity.User">
+		<result column="id" property="id" />
+		<result column="userName" property="userName" />
+		<result column="pwd" property="pwd" />
+	</resultMap>
+
+	<parameterMap id="User" type="com.sinovatio.owls.business.demo.entity.User"/>
+
+	<sql id="Base_Column_List">
+		id, username, pwd
+	</sql>
+
+	<select id="findById" resultMap="BaseResultMap" parameterType="java.lang.Long">
+		select
+		<include refid="Base_Column_List" />
+		from uic_bds_staff
+		where id = #{id}
+	</select>
+
+	<select id="findAllUser" resultMap="BaseResultMap" >
+		select
+		<include refid="Base_Column_List" />
+		from uic_bds_staff
+	</select>
+
+	<insert id="saveUser" parameterMap="User" useGeneratedKeys="true" keyProperty="id">
+		insert into
+		uic_bds_staff(id,username,pwd)
+		values
+		(#{id},#{userName},#{pwd})
+	</insert>
+
+	<update id="updateUser" parameterMap="User">
+		update
+		uic_bds_staff
+		set
+		<if test="username!=null">
+			username = #{userName},
+		</if>
+		<if test="pwd!=null">
+			pwd = #{pwd},
+		</if>		
+		where
+		id = #{id}
+	</update>
+
+	<delete id="deleteUser" parameterType="java.lang.Long">
+		delete from
+		uic_bds_staff
+		where
+		id = #{id}
+	</delete>
+
+
+	<!-- 调用存储过程，获取返回值 -->
+	<parameterMap type="java.util.Map" id="procedureMap">
+         <parameter property="i_sequence" mode="IN" jdbcType="VARCHAR"/>
+         <parameter property="o_error1" mode="OUT" jdbcType="VARCHAR"/>
+         <parameter property="o_error2" mode="OUT" jdbcType="VARCHAR"/>
+     </parameterMap>
+
+	<select id="procedure" parameterMap="procedureMap" statementType="CALLABLE">
+		<![CDATA[
+			call get_test_uic_bds_role1(?,?,?)    
+		]]>
+	</select>
+	
+	<!-- 调用存储过程，没有返回值 -->
+	<parameterMap type="java.util.Map" id="procedureMap1">
+         <parameter property="id" mode="IN" jdbcType="INTEGER"/>
+         <parameter property="username" mode="IN" jdbcType="VARCHAR"/>
+     </parameterMap>
+
+	<select id="procedure1" parameterMap="procedureMap1" statementType="CALLABLE">
+		<![CDATA[
+			call get_test_uic_bds_role(?,?)    
+		]]>
+	</select>
+</mapper>
