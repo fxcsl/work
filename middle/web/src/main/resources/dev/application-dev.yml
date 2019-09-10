@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: web
+server:
+  port: 9001
+
+
+logging:
+  level:
+    root: info
+  path: /logs/${spring.application.name}-logs
+  config: classpath:logback-core.xml

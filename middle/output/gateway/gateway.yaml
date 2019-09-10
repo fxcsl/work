@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: gateway
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: gateway
+  template:
+    metadata:
+      labels:
+        run: gateway
+    spec:
+      containers: 
+      - name: gateway
+        image: 162.168.2.141:1180/middle/gateway:1.0.0
+        imagePullPolicy: IfNotPresent
+        command: ["java"]
+        args: ["-Xbootclasspath/a:/config", "-jar", "/usr/local/app.jar"]
+        volumeMounts:
+          - name: config
+            mountPath: /config
+          - name: logs
+            mountPath: /logs
+        ports: 
+        - containerPort: 9000
+          protocol: TCP
+      volumes:
+        - name: config
+          configMap:
+            name: gateway
+        - name: logs
+          hostPath:
+            path: /home/docker/middle/logs
+
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: gateway
+  labels: 
+    run: gateway
+spec: 
+  type: LoadBalancer
+  ports: 
+  - port: 38080
+    nodePort: 31000
+    targetPort: 9000
+    protocol: TCP
+  selector: 
+    run: gateway
+

@@ -1,0 +1,54 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: web
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      run: web
+  template:
+    metadata:
+      labels:
+        run: web
+    spec:
+      containers: 
+      - name: web
+        image: 162.168.2.141:1180/middle/web:1.0.0
+        imagePullPolicy: IfNotPresent
+        command: ["java"]
+        args: ["-Xbootclasspath/a:/config", "-jar", "/usr/local/app.jar"]
+        volumeMounts:
+          - name: config
+            mountPath: /config
+          - name: logs
+            mountPath: /logs
+        ports: 
+        - containerPort: 9001
+          protocol: TCP
+      volumes:
+        - name: config
+          configMap:
+            name: web
+        - name: logs
+          hostPath:
+            path: /home/docker/middle/logs
+
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: web
+  labels: 
+    run: web
+spec: 
+  type: LoadBalancer
+  ports: 
+  - port: 38080
+    nodePort: 31001
+    targetPort: 9001
+    protocol: TCP
+  selector: 
+    run: web
+

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: service
+server:
+  port: 9002
+
+
+logging:
+  level:
+    root: info
+  path: /logs/${spring.application.name}-logs
+  config: classpath:logback-core.xml
+

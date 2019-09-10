@@ -1,0 +1,8 @@
+com\sinovatio\middle\config\Env.class
+com\sinovatio\middle\BusPacketCheckFilter.class
+com\sinovatio\middle\AuthSignFilter.class
+com\sinovatio\middle\GatewayApplication.class
+com\sinovatio\middle\MainController.class
+com\sinovatio\middle\config\ProdConfig.class
+com\sinovatio\middle\Services.class
+com\sinovatio\middle\config\DevConfig.class
