@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <delete dir="../output/service/config/"/>
+  <copy todir="../output/service/config/">
+    <fileset dir="target/service-1.0.0-config/prod/">
+      <include name="*.properties"/>
+      <include name="*.yml"/>
+      <include name="*.json"/>
+      <include name="*.xml"/>
+    </fileset>
+  </copy>
+  <copy todir="../output/service/">
+    <fileset dir="script"></fileset>
+  </copy>
+</target>
+</project>

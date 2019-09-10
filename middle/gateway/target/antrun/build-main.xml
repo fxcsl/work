@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <delete dir="../output/gateway/config/"/>
+  <copy todir="../output/gateway/config/">
+    <fileset dir="target/gateway-1.0.0-config/prod/">
+      <include name="*.properties"/>
+      <include name="*.yml"/>
+      <include name="*.json"/>
+      <include name="*.xml"/>
+    </fileset>
+  </copy>
+  <copy todir="../output/gateway/">
+    <fileset dir="script"></fileset>
+  </copy>
+</target>
+</project>
