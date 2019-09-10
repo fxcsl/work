@@ -1,6 +1,12 @@
 
-update version 
+##update version code
+```
 mvn versions:set -DnewVersion=1.0.1
 
-package
+```
+
+##package
+```
 mvn clean package -Pprod
+
+```
