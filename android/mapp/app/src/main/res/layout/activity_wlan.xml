@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="10dip"
+    android:background="#1F1D5CA0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@id/public_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        style="@style/public_block"
+        android:layout_marginBottom="10dip"
+        >
+        <RelativeLayout
+            android:id="@id/headLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <Button
+                android:id="@id/bt_back"
+                android:layout_width="10dip"
+                android:layout_height="21dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dip"
+                android:background="@mipmap/back"
+                android:button="@null"
+                android:checked="false"
+                android:text=""
+                android:textSize="12sp"
+                android:visibility="visible" />
+            <ImageView
+                android:id="@id/tv_title"
+                android:layout_width="105dip"
+                android:layout_height="47dip"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@mipmap/title_rapier" />
+            <Button
+                android:id="@id/bt_refresh"
+                android:layout_width="20dip"
+                android:layout_height="19dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dip"
+                android:background="@mipmap/refresh"
+                android:button="@null"
+                android:checked="false"
+                android:text=""
+                android:textSize="12sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:gravity="center" android:orientation="vertical"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:id="@id/layout_connected"
+        style="@style/public_block"
+        >
+        <!--nodata -->
+        <TextView android:textSize="12sp" android:textColor="#FFA6A6A6" android:gravity="center"
+            android:id="@id/tv_no_net" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip" android:text="@string/NO_NET" />
+
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_net" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical"
+                android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="6.0">
+                <ImageView android:layout_width="27.5dip" android:layout_height="41.2dip"
+                    android:layout_marginTop="3.0dip" android:src="@mipmap/phone" />
+                <TextView android:textSize="12sp" android:textColor="#FF4A4A4A"
+                    android:gravity="center" android:id="@id/tv_device" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center" android:orientation="vertical"
+                android:layout_width="100dip" android:layout_height="148dip"
+                android:background="#1A2A56C6"
+                >
+                <TextView
+                    android:textColor="#FF2A56C6"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:id="@id/tv_spot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <!--
+                <ImageView android:background="@drawable/exchange" android:layout_width="80.0dip" android:layout_height="18.0dip" />
+                -->
+                <ImageView android:background="@mipmap/exchange" android:layout_width="84.0dip"
+                    android:layout_height="13.0dip" />
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center" android:orientation="vertical"
+                android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="6.0">
+                <ImageView android:layout_width="42.0dip" android:layout_height="42.0dip"
+                    android:src="@mipmap/router" android:scaleType="centerCrop" />
+                <TextView android:textSize="12sp" android:textColor="#FF4A4A4A"
+                    android:gravity="center" android:id="@id/tv_ap" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <TextView android:textSize="12sp" android:textColor="#FF2A56C6" android:gravity="center"
+            android:id="@id/tv_more" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" />
+        <com.bin.david.form.core.SmartTable
+            android:id="@+id/connected_wifi_device"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="-23dip"
+            android:layout_below="@id/hotspot_list"
+            />
+    </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical"
+        android:layout_width="fill_parent" android:layout_height="wrap_content"
+        android:id="@id/layout_nodata"
+        android:visibility="gone"
+        >
+        <ImageView android:layout_width="75dip" android:layout_height="74dip"
+            android:layout_marginTop="16dip" android:src="@mipmap/nodata" />
+        <TextView android:textSize="12sp" android:textColor="#A6A6A6"
+            android:gravity="center" android:text="@string/NO_DATA"
+            android:layout_marginBottom="15dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

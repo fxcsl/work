@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbarSize="3.0dip"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            style="@style/public_block"
+            >
+            <LinearLayout android:orientation="horizontal" style="@style/monitor_header_text">
+                <TextView android:text="@string/connected" style="@style/monitor_header_text_plain"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout android:gravity="center" android:orientation="vertical"
+                    android:layout_width="fill_parent" android:layout_height="wrap_content"
+                    android:id="@id/layout_nodata"
+                    android:visibility="gone"
+                    >
+                    <ImageView android:layout_width="75dip" android:layout_height="74dip"
+                        android:layout_marginTop="16dip" android:src="@mipmap/nodata" />
+                    <TextView android:textSize="12.0sp" android:textColor="#A6A6A6"
+                        android:gravity="center" android:text="@string/NO_DATA"
+                        android:layout_marginBottom="15dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            <LinearLayout android:orientation="vertical" android:id="@id/layout_connected"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:layout_marginLeft="0.0dip" android:layout_marginRight="0.0dip">
+            <include layout="@layout/layout_wifi_connected" />
+            <TextView
+                android:textSize="16.0sp"
+                android:textStyle="bold"
+                android:id="@id/tv_arp"
+                android:layout_width="fill_parent"
+                android:text="@string/lan_devices"
+                android:layout_marginBottom="10dip"
+                style="@style/style_tv_about" />
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+<!--
+        <TextView android:text="@string/channel" style="@style/monitor_header_text" />
+        -->
+    <RelativeLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/public_block"
+        android:layout_marginTop="10dip"
+        >
+
+        <TextView android:id="@+id/hotspot_list" android:text="@string/hotspot_list"
+            style="@style/monitor_header_text_plain" />
+
+        <LinearLayout android:gravity="center" android:orientation="vertical"
+            android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:id="@id/layout_nodata_wifilist"
+            android:visibility="gone"
+            >
+            <ImageView android:layout_width="75dip" android:layout_height="74dip"
+                android:layout_marginTop="16dip" android:src="@mipmap/nodata" />
+            <TextView android:textSize="12.0sp" android:textColor="#A6A6A6"
+                android:gravity="center" android:text="@string/NO_DATA"
+                android:layout_marginBottom="15dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <com.bin.david.form.core.SmartTable
+            android:id="@id/table_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="350dip"
+            android:layout_marginTop="-33dp"
+            android:layout_below="@id/hotspot_list"
+            />
+
+    </RelativeLayout>
+        <!--<make.more.r2d2.cellular_z.view.CsvFormView android:id="@id/csv_form_wifi_list" android:layout_marginBottom="80.0dip" style="@style/monitor_form" />-->
+    </LinearLayout>
+</ScrollView>

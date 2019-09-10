@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ConstellationType">
+        <item>Other</item>
+        <item>GPS</item>
+        <item>SBAS</item>
+        <item>Glonass</item>
+        <item>QZSS</item>
+        <item>BeiDou</item>
+        <item>Galileo</item>
+    </string-array>
+    <string-array name="cdma_base_names">
+        <item>NAME</item>
+        <item>LONGITUDE</item>
+        <item>LATITUDE</item>
+        <item>AZIMUTH</item>
+        <item>NID</item>
+        <item>BID</item>
+        <item>SID</item>
+    </string-array>
+    <string-array name="gsm_base_names">
+        <item>NAME</item>
+        <item>LONGITUDE</item>
+        <item>LATITUDE</item>
+        <item>AZIMUTH</item>
+        <item>LAC</item>
+        <item>CI</item>
+        <item>ARFCN</item>
+        <item>BSIC</item>
+    </string-array>
+    <string-array name="lte_base_names">
+        <item>NAME</item>
+        <item>LONGITUDE</item>
+        <item>LATITUDE</item>
+        <item>AZIMUTH</item>
+        <item>TAC</item>
+        <item>PCI</item>
+        <item>ECI</item>
+        <item>EARFCN</item>
+        <item>eNodeB</item>
+        <item>cellId</item>
+    </string-array>
+    <string-array name="memento_bottom">
+        <item>1 M</item>
+        <item>40 S</item>
+        <item>20 S</item>
+        <item>NOW</item>
+    </string-array>
+    <string-array name="wcdma_base_names">
+        <item>NAME</item>
+        <item>LONGITUDE</item>
+        <item>LATITUDE</item>
+        <item>AZIMUTH</item>
+        <item>LAC</item>
+        <item>CI</item>
+        <item>UARFCN</item>
+        <item>PSC</item>
+    </string-array>
+</resources>

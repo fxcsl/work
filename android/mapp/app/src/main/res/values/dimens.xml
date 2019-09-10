@@ -1,0 +1,99 @@
+<resources>
+
+    <dimen name="title_text_size">15sp</dimen>
+    <dimen name="city_name_size">20sp</dimen>
+    <dimen name="city_size_size">12sp</dimen>
+    <dimen name="city_progress_size">11sp</dimen>
+    <dimen name="normal_margin">10dp</dimen>
+    <dimen name="font_58">29dp</dimen>
+    <dimen name="font_170">85dp</dimen>
+
+    <dimen name="offline_down_title_hight">25dp</dimen>
+    <dimen name="font_22">11sp</dimen>
+    <dimen name="font_24">12sp</dimen>
+    <dimen name="font_26">13sp</dimen>
+    <dimen name="font_28">14sp</dimen>
+    <dimen name="font_30">15sp</dimen>
+    <dimen name="font_32">16sp</dimen>
+    <dimen name="font_34">17sp</dimen>
+    <dimen name="font_36">18sp</dimen>
+
+    <dimen name="poi_title_size">20sp</dimen>
+    <dimen name="poi_field_size">16sp</dimen>
+    <dimen name="margin_left">15dp</dimen>
+    <dimen name="margin_right">15dp</dimen>
+    <dimen name="margin_middle">2dp</dimen>
+    <!--
+    <dimen name="fab_margin">16dp</dimen>
+    -->
+
+
+<!-- start -->
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="compat_button_inset_horizontal_material">4.0dip</dimen>
+    <dimen name="compat_button_inset_vertical_material">6.0dip</dimen>
+    <dimen name="compat_button_padding_horizontal_material">8.0dip</dimen>
+    <dimen name="compat_button_padding_vertical_material">4.0dip</dimen>
+    <dimen name="compat_control_corner_material">2.0dip</dimen>
+    <dimen name="compat_notification_large_icon_max_height">320.0dip</dimen>
+    <dimen name="compat_notification_large_icon_max_width">320.0dip</dimen>
+    <dimen name="fab_margin">16.0dip</dimen>
+    <dimen name="fastscroll_default_thickness">8.0dip</dimen>
+    <dimen name="fastscroll_margin">0.0dip</dimen>
+    <dimen name="fastscroll_minimum_range">50.0dip</dimen>
+    <dimen name="item_touch_helper_max_drag_scroll_per_frame">20.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_max_velocity">800.0dip</dimen>
+    <dimen name="item_touch_helper_swipe_escape_velocity">120.0dip</dimen>
+    <dimen name="notification_action_icon_size">32.0dip</dimen>
+    <dimen name="notification_action_text_size">13.0sp</dimen>
+    <dimen name="notification_big_circle_margin">12.0dip</dimen>
+    <dimen name="notification_content_margin_start">8.0dip</dimen>
+    <dimen name="notification_large_icon_height">64.0dip</dimen>
+    <dimen name="notification_large_icon_width">64.0dip</dimen>
+    <dimen name="notification_main_column_padding_top">10.0dip</dimen>
+    <item type="dimen" name="notification_media_narrow_margin">@dimen/notification_content_margin_start</item>
+    <dimen name="notification_right_icon_size">16.0dip</dimen>
+    <dimen name="notification_right_side_padding_top">4.0dip</dimen>
+    <dimen name="notification_small_icon_background_padding">3.0dip</dimen>
+    <dimen name="notification_small_icon_size_as_large">24.0dip</dimen>
+    <dimen name="notification_subtext_size">13.0sp</dimen>
+    <dimen name="notification_top_pad">10.0dip</dimen>
+    <dimen name="notification_top_pad_large_text">5.0dip</dimen>
+    <dimen name="rbto_radius_10dp">10.0dip</dimen>
+    <dimen name="rbto_radius_16dp">16.0dip</dimen>
+    <dimen name="rbto_radius_4dp">4.0dip</dimen>
+    <dimen name="subtitle_corner_radius">2.0dip</dimen>
+    <dimen name="subtitle_outline_width">2.0dip</dimen>
+    <dimen name="subtitle_shadow_offset">2.0dip</dimen>
+    <dimen name="subtitle_shadow_radius">2.0dip</dimen>
+    <dimen name="tr_activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="tr_activity_vertical_margin">16.0dip</dimen>
+    <dimen name="tr_dimen_10">5.0dip</dimen>
+    <dimen name="tr_dimen_16">8.0dip</dimen>
+    <dimen name="tr_dimen_184">92.0dip</dimen>
+    <dimen name="tr_dimen_20">10.0dip</dimen>
+    <dimen name="tr_dimen_220">110.0dip</dimen>
+    <dimen name="tr_dimen_240">120.0dip</dimen>
+    <dimen name="tr_dimen_250">125.0dip</dimen>
+    <dimen name="tr_dimen_260">130.0dip</dimen>
+    <dimen name="tr_dimen_28">14.0dip</dimen>
+    <dimen name="tr_dimen_30">15.0dip</dimen>
+    <dimen name="tr_dimen_32">16.0dip</dimen>
+    <dimen name="tr_dimen_380">190.0dip</dimen>
+    <dimen name="tr_dimen_40">20.0dip</dimen>
+    <dimen name="tr_dimen_460">230.0dip</dimen>
+    <dimen name="tr_dimen_50">25.0dip</dimen>
+    <dimen name="tr_dimen_6">3.0dip</dimen>
+    <dimen name="tr_dimen_60">30.0dip</dimen>
+    <dimen name="tr_dimen_62">31.0dip</dimen>
+    <dimen name="tr_dimen_70">35.0dip</dimen>
+    <dimen name="tr_dimen_80">40.0dip</dimen>
+    <dimen name="tr_dimen_88">44.0dip</dimen>
+    <dimen name="tr_font_size_14">14.0sp</dimen>
+    <dimen name="tr_home_viewpager_height">212.0dip</dimen>
+    <dimen name="tr_textsize_28">14.0sp</dimen>
+    <dimen name="tr_toolbar_height">55.0dip</dimen>
+    <dimen name="tr_toolbar_padding_top">0.0dip</dimen>
+
+</resources>

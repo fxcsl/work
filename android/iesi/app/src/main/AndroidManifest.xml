@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sinovatio.iesi">
+    <!-- 用于访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+    <application
+        android:name=".Myapplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_app"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.TargetInfoQueryActivity"
+            android:label="@string/title_activity_target_info_query"
+            android:theme="@style/NoActionBar"></activity>
+        <activity
+            android:name=".view.TargetProfileQueryActivity"
+            android:label="@string/title_activity_target_profile_query"
+            android:theme="@style/NoActionBar"></activity>
+        <activity android:name=".view.TaskActivity" />
+        <activity
+            android:name=".view.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".view.WellcomeActivity"
+            android:theme="@style/AppTheme.NoActionBarWithBackGround">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.EquipmentInforActivity" /> <!-- android:theme="@style/ProjectDialogTheme" -->
+        <activity
+            android:name=".view.EquipmentDetailsActivity"
+            android:theme="@style/ProjectDialogTheme" />
+
+        <activity android:name=".view.TargetArchivesInfoActivity"/>
+        <activity android:name=".view.StatusActivity"
+            android:theme="@style/ProjectDialogTheme" />
+        <service android:name=".service.LocationService" />
+        <service android:name=".service.PlayerMusicService" />
+
+    </application>
+
+</manifest>

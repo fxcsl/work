@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <dbname value="iesi" ></dbname>
+
+    <version value="2" ></version>
+
+    <list>
+        <mapping class="com.sinovatio.iesi.model.adb.UserInfo"></mapping>
+    </list>
+
+</litepal>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="我的功能"
+        android:textColor="#FF333333"
+        android:textSize="14dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:columnCount="4">
+
+        <TextView
+            android:id="@+id/tv_archives"
+            android:layout_width="90dp"
+            android:text="档案查询"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/archives_black"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="90dp"
+            android:text="实时信息查询"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/infor_black"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_knowledge"
+            android:layout_width="90dp"
+            android:text="知识库"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/infor_black"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_target"
+            android:layout_width="90dp"
+            android:text="目标信息查询"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/info_target"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_start"
+            android:layout_width="90dp"
+            android:text="状态反馈"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/info_state"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_map"
+            android:layout_width="90dp"
+            android:text="地图"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/info_map"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+        <TextView
+            android:id="@+id/tv_early"
+            android:layout_width="90dp"
+            android:text="预警"
+            android:textSize="12dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="15dp"
+            android:drawableTop="@mipmap/early_warning"
+            android:gravity="center_horizontal|bottom"
+            android:layout_height="90dp" />
+    </GridLayout>
+</LinearLayout>

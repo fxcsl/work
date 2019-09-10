@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarSize="3.0dip"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginBottom="10dip"
+            style="@style/public_block">
+            <TextView
+                android:id="@+id/slot_title"
+                android:text="@string/card_slot"
+                style="@style/monitor_header_text"/>
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/card_slot_view"
+                android:layout_below="@id/slot_title"
+                style="@style/recycle_text"
+
+                >
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            style="@style/public_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:descendantFocusability="blocksDescendants">
+
+            <TextView
+                android:id="@+id/network_operator_title"
+                style="@style/monitor_header_text"
+                android:text="@string/network_operator" />
+            <ImageView
+                android:id="@+id/network_operator_image"
+                style="@style/monitor_header_text"
+                android:layout_width="86dip"
+                android:layout_height="74dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/network_operator_title"
+                android:visibility="gone"
+                android:src="@mipmap/title_rapier" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/operator_view"
+                    style="@style/recycle_text"
+                    android:layout_width="250dip"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/network_operator_title"
+                    android:layout_toRightOf="@id/network_operator_image"
+                    android:layout_alignParentRight="true"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginBottom="10dip"
+            style="@style/public_block">
+            <TextView
+                android:id="@+id/service_area_title"
+                android:text="@string/service_area"
+                style="@style/monitor_header_text"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id = "@+id/service_area_view"
+                android:layout_below="@id/service_area_title"
+                style="@style/recycle_text">
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="blocksDescendants"
+            android:layout_marginBottom="10dip"
+            style="@style/public_block">
+            <TextView
+                android:id="@+id/adjacent_cell_title"
+                android:text="@string/adjacent_cell"
+                style="@style/monitor_header_text"/>
+
+            <com.bin.david.form.core.SmartTable
+                android:id="@id/table_NeiCellInfo"
+                android:layout_width="match_parent"
+                android:layout_height="250dip"
+                android:layout_marginTop="-23dip"
+                android:layout_below="@id/adjacent_cell_title"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

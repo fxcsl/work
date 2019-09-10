@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">iesi</string>
+    <string name="arms_infor">携带装备情况</string>
+
+    <array name="equipment_list">
+        <item>指纹识别</item>
+        <item>照相机</item>
+        <item>摄相机</item>
+        <item>GPS</item>
+        <item>对讲设备</item>
+        <item>武器</item>
+        <item>防弹衣</item>
+        <item>便携式电脑</item>
+    </array>
+    <string name="title_activity_target_info_query">TargetInfoQueryActivity</string>
+    <string name="title_activity_target_profile_query">TargetProfileQueryActivity</string>
+</resources>

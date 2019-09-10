@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/myViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/tv_item_one"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/news_unselected"
+            android:textSize="9dp"
+            android:textColor="#999999"
+            android:text="消息" />
+
+
+        <TextView
+            android:id="@+id/tv_item_two"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/contact_unselected"
+            android:textSize="9dp"
+            android:textColor="#999999"
+            android:text="通讯录" />
+
+
+        <TextView
+            android:id="@+id/tv_item_three"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/function_unselected"
+            android:textSize="9dp"
+            android:textColor="#999999"
+            android:text="功能" />
+
+        <TextView
+            android:id="@+id/tv_item_four"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:drawableTop="@mipmap/mine_unselect"
+            android:textSize="9dp"
+            android:textColor="#999999"
+            android:text="我的" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

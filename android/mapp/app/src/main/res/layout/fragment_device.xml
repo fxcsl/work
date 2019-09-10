@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:scrollbarSize="3.0dip"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:descendantFocusability="blocksDescendants"
+            style="@style/public_block">
+            <TextView
+                android:id="@id/tv_hardware"
+                android:text="@string/hardware"
+                style="@style/monitor_header_text" />
+            <!--
+            <make.more.r2d2.cellular_z.view.KeyValueFormView android:id="@id/key_value_hardware" style="@style/monitor_form" />
+            -->
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/recycler_view"
+                style="@style/recycle_text"
+                android:layout_below="@id/tv_hardware"
+
+                android:layout_marginTop="-3dp"></android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:descendantFocusability="blocksDescendants"
+            style="@style/public_block">
+            <TextView
+                android:id="@+id/battery_title"
+                android:text="@string/battery"
+                style="@style/monitor_header_text" />
+            <!--
+            <make.more.r2d2.cellular_z.view.KeyValueFormView android:id="@id/key_value_battery" style="@style/monitor_form" />
+            -->
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/battery_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/battery_title"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dip"
+            android:descendantFocusability="blocksDescendants"
+            style="@style/public_block">
+            <TextView
+                android:id="@+id/system_title"
+                android:text="@string/system"
+                style="@style/monitor_header_text" />
+            <!--
+            <make.more.r2d2.cellular_z.view.KeyValueFormView android:id="@id/key_value_system" android:layout_marginBottom="12.0dip" style="@style/monitor_form" />
+            -->
+
+            <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/system_view"
+                android:layout_below="@id/system_title"
+                style="@style/recycle_text"
+                >
+            </android.support.v7.widget.RecyclerView>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

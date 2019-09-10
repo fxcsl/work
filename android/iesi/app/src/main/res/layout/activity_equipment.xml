@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title_bar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:text="我的装备"
+            android:textColor="@color/blue"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/imag_detele"
+            android:layout_width="wrap_content"
+            android:src="@mipmap/delete_blue"
+            android:visibility="gone"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_height="129dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/recycle_null_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="暂无装备"
+            android:gravity="center"
+            android:textColor="@color/color_999999"
+            android:textSize="15sp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="选择携带的设备"
+        android:textSize="12sp"
+        android:background="@color/color_f7f7f7"
+        android:textColor="@color/color_999999"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="8dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </RelativeLayout>
+
+    
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:text="提 交"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@color/blue"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:layout_height="50dp" />
+
+</LinearLayout>
+

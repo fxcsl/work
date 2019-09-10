@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="110dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/im_detele"
+        android:layout_width="25dp"
+        android:src="@drawable/bankground_blue"
+        android:layout_alignParentRight="true"
+        android:visibility="visible"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        android:layout_height="25dp" />
+
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:background="@color/color_108EE9"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="9dp"
+        android:padding="13dp"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/iv_picon"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/z_camera"/>
+
+        <TextView
+            android:id="@+id/tv_ptxt"
+            android:layout_width="match_parent"
+            android:text=""
+            android:layout_marginLeft="30dp"
+            android:textColor="#FF333333"
+            android:lineSpacingExtra="1dp"
+            android:textSize="12sp"
+            android:layout_height="29dp" />
+
+        <TextView
+            android:id="@+id/tv_txt"
+            android:layout_below="@id/tv_ptxt"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textColor="#FF000000"
+            android:textSize="12sp"
+            android:lineSpacingExtra="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <!-- mine页面框架LinearLayout样式 -->
+    <style name="style_mine_Linear">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">#FFFFFF</item>
+    </style>
+    <!-- mine页面各栏LinearLayout样式 -->
+    <style name="style_mine_ll">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!-- mine页面各栏TextView样式 -->
+    <style name="style_mine_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:gravity">center_vertical|left</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:drawableRight">@drawable/right_arrow</item>
+        <item name="android:clickable">true</item>
+    </style>
+    <!-- mine页面各栏ImageView样式 -->
+    <style name="style_mine_iv">
+        <item name="android:layout_width">52dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <style name="ProjectDialogTheme">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <!-- 自定义dialog button样式 -->
+    <style name="style_dialog_bt">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">44dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <!-- 功能查询各界面样式 -->
+    <style name="style_target_et">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:hint">搜索</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:background">#33999999</item>
+    </style>
+    <style name="style_target_rv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_marginRight">15dp</item>
+    </style>
+    <style name="style_target_tv">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:text">暂无目标</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/color_999999</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <!-- 功能查询RecyclerView控件样式 -->
+    <style name="style_rv_iv">
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@mipmap/target_photo</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="style_rv_tv_name">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:text">张立伟</item>
+        <item name="android:textColor">#333333</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="style_rv_tv_more">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:text">13653534666</item>
+        <item name="android:textColor">#999999</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="style_rv_iv_more">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarWithBackGround">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@mipmap/wellcome</item>
+    </style>
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="style_tv_bg">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/tv_bg</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:paddingTop">3.0dip</item>
+        <item name="android:paddingRight">8.0dip</item>
+        <item name="android:paddingBottom">3.0dip</item>
+        <item name="android:layout_width">160.0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+    </style>
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--<style name="MyCheckBox" parent="Theme.AppCompat.Light">-->
+        <!--<item name="colorControlNormal">@color/blue</item>-->
+        <!--<item name="colorControlActivated">@color/blue</item>-->
+    <!--</style>-->
+    <style name="MyCheckBox">
+        <!--波纹的颜色-->
+        <item name="android:colorControlHighlight">@color/colorPrimary</item>
+        <!--选中的颜色-->
+        <item name="colorAccent">@color/blue</item>
+    </style>
+</resources>

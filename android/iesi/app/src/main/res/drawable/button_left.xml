@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- This is the main color -->
+<item>
+    <shape>
+        <solid android:color="#CCCCCC" />
+        <corners
+            android:bottomLeftRadius="8dp" />
+    </shape>
+</item>
+<!-- This is the line -->
+<item android:top="1dp" android:right="0.5dp">
+    <shape>
+        <!--背景颜色-->
+        <solid android:color="#fff" />
+        <!--左下圆角-->
+        <corners
+            android:bottomLeftRadius="8dp" />
+    </shape>
+</item>
+</layer-list>

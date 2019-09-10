@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C3AA9</color>
+    <color name="colorPrimaryDark">#1C3AA9</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorMainDrawerPrimary">#FE9B00</color>
+    <color name="colorMainDrawerPrimaryDark">#FE9B00</color>
+    <color name="colorMainDrawerAccent">#FE9B00</color>
+
+    <!--Toolbar Back 颜色-->
+    <color name="color_toolbar_appbar_bg">#FE9B00</color>
+    <color name="color_toolbar_text">#FFFFFF</color>
+    <color name="color_main_toolbar_appbar_bg">#FE9B00</color>
+
+
+
+
+
+    <!--   ~~~~~~~~~~~~~~~~~~  登录    ~~~~~~~~~~~~~~~~~~~~~~     -->
+    <!--登录输入框 选中 未选中状态 字体的颜色-->
+    <color name="tab_login_press">#FE9B00</color>
+    <color name="tab_login_nor">#999</color>
+    <!--登录输入框 选中 未选中状态 下划线的颜色-->
+    <color name="login_edit_selector_bgColor1">#FE9B00</color>
+    <color name="login_edit_selector_bgColor2">#FE9B00</color>
+    <color name="login_edit_selector_bgColor3">#FE9B00</color>
+    <!--登陆输入框光标颜色-->
+    <color name="login_edit_cursor_color">#FE9B00</color>
+
+    <!--Button 通用颜色-->
+    <color name="color_btn_bg">#FE9B00</color>
+    <color name="color_btn_bg2">#FE6B00</color>
+
+    <!--登录按钮的背景颜色-->
+    <color name="color_login_btn_bg">#FE9B00</color>
+    <!--登录界面 忘记密码 新用户注册 文字的颜色-->
+    <color name="color_login_text">#FE9B00</color>
+
+
+    <!--- start -->
+    <color name="green">#ff66aa66</color>
+    <color name="main_btn_red_normal">#ff00abee</color>
+    <color name="main_btn_red_press">#cc00abee</color>
+    <color name="notification_action_color_filter">#ffffffff</color>
+    <color name="notification_icon_bg_color">#ff9e9e9e</color>
+    <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="primary_text_default_material_dark">#ffffffff</color>
+    <color name="ripple_material_light">#1f000000</color>
+    <color name="secondary_text_default_material_dark">#b3ffffff</color>
+    <color name="secondary_text_default_material_light">#8a000000</color>
+    <color name="text_color_white">#ffffffff</color>
+    <color name="tr_bg_black">#ff333333</color>
+    <color name="tr_bg_color">#fff0f0f0</color>
+    <color name="tr_bg_default">#fff1f1f1</color>
+    <color name="tr_bg_line">#fff1f1f1</color>
+    <color name="tr_bg_white">#ffffffff</color>
+    <color name="tr_border_clear_history">#ffbfbfbf</color>
+    <color name="tr_colorAccent">#ff1d82d2</color>
+    <color name="tr_colorPrimary">#ff1d82d2</color>
+    <color name="tr_colorPrimaryDark">#ff1d82d2</color>
+    <color name="tr_colorclear">#00000000</color>
+    <color name="tr_count_down_font">#fff4999a</color>
+    <color name="tr_hit_text_main_color">#ff999999</color>
+    <color name="tr_home_tab_text">#ff666666</color>
+    <color name="tr_line_color">#ffb2b2b2</color>
+    <color name="tr_main_line">#ffe3e3e3</color>
+    <color name="tr_main_text_white">#ffffffff</color>
+    <color name="tr_text_main_color">#ff333333</color>
+    <color name="tr_transparent_background">#46000000</color>
+    <color name="tr_white">#ffffffff</color>
+    <color name="transparent">#00000000</color>
+    <color name="yellow">#ffe8bf6a</color>
+    <color name="yellow_trans">#88e8bf6a</color>
+
+
+
+
+
+
+</resources>

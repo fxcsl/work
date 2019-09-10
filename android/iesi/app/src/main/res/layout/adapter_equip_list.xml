@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_height="52dp">
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="20dp"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/zhiwen_blue"
+        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:text="指纹识别"
+        android:layout_marginLeft="15dp"
+        android:textColor="@color/color_FF333333"
+        android:gravity="center_vertical"
+        android:textSize="16sp"
+        android:layout_height="52dp" />
+    <ImageView
+        android:layout_width="12dp"
+        android:layout_marginRight="15dp"
+        android:src="@mipmap/xiala"
+        android:layout_height="20dp" />
+</LinearLayout>
