@@ -6,18 +6,17 @@
     <parent>
         <groupId>com.sinovatio.middle</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>com.sinovatio.middle</groupId>
     <artifactId>gateway</artifactId>
-    <version>1.0.0</version>
     <name>gateway</name>
     <description>Demo project for gateway</description>
 
     <properties>
         <springcloud.kubernetes.version>1.0.1.RELEASE</springcloud.kubernetes.version>
-        <docker.image.prefix>162.168.2.141:1180/lixg/fxctest</docker.image.prefix>
+        <docker.image.prefix>162.168.2.141:1180/middle</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -121,6 +120,7 @@
 <!--                <directory>src/main/resources/${profiles.active}</directory>-->
 <!--            </resource>-->
         </resources>
+
         <plugins>
             <!--  assembly -->
             <plugin>
@@ -154,8 +154,8 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <delete dir="../output/${project.artifactId}/config/" />
-                                <copy todir="../output/${project.artifactId}/config/">
+                                <delete dir="../output/${project.artifactId}-${project.version}/config/" />
+                                <copy todir="../output/${project.artifactId}-${project.version}/config/">
                                     <fileset dir="target/${project.artifactId}-${project.version}-config/${profile.active}/">
 <!--                                    <fileset dir="target/${project.artifactId}-${project.version}-config/">-->
                                         <include name="*.properties" />
@@ -164,7 +164,7 @@
                                         <include name="*.xml" />
                                     </fileset>
                                 </copy>
-                                <copy todir="../output/${project.artifactId}/">
+                                <copy todir="../output/${project.artifactId}-${project.version}/">
                                  <fileset dir="script"></fileset>
                                 </copy>
                             </tasks>

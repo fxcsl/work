@@ -6,12 +6,11 @@
     <parent>
         <groupId>com.sinovatio.middle</groupId>
         <artifactId>parent</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </parent>
 
     <groupId>com.sinovatio.middle</groupId>
     <artifactId>service</artifactId>
-    <version>1.0.0</version>
     <name>service</name>
     <description>Demo project for service</description>
 
@@ -94,8 +93,8 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <delete dir="../output/${project.artifactId}/config/" />
-                                <copy todir="../output/${project.artifactId}/config/">
+                                <delete dir="../output/${project.artifactId}-${project.version}/config/" />
+                                <copy todir="../output/${project.artifactId}-${project.version}/config/">
                                     <fileset dir="target/${project.artifactId}-${project.version}-config/${profile.active}/">
                                         <!--                                    <fileset dir="target/${project.artifactId}-${project.version}-config/">-->
                                         <include name="*.properties" />
@@ -104,7 +103,7 @@
                                         <include name="*.xml" />
                                     </fileset>
                                 </copy>
-                                <copy todir="../output/${project.artifactId}/">
+                                <copy todir="../output/${project.artifactId}-${project.version}/">
                                     <fileset dir="script"></fileset>
                                 </copy>
                             </tasks>

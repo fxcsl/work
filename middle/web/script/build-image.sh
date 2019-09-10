@@ -1,7 +1,8 @@
 #!/bin/bash
 
 IMAGE_NAME=web
-TAG=1.0.0
+filepath=`pwd`
+TAG=${filepath##*-}
 REPO_NAME=middle
 DOCKER_FILE_NAME=dockerfile
 PRE_TAG=162.168.2.141:1180
