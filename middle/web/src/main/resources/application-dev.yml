@@ -1,8 +1,16 @@
 spring:
   application:
     name: web
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    cache: false
 server:
   port: 9001
+  servlet:
+    context-path: /web
+
 
 
 logging:
@@ -11,8 +19,12 @@ logging:
   path: /logs/${spring.application.name}-logs
   config: classpath:logback-core.xml
 
+resources: # 指定静态资源的路径
+  static-locations: classpath:/static/,classpath:/views/
+  cache-period: 0
+
 
 service:
   gateway: 127.0.0.1:9000
-  web: 127.0.0.1:9001
-  service: 127.0.0.1:9002
+  web: 127.0.0.1:9001/web
+  service: 127.0.0.1:9002/service

@@ -13,9 +13,9 @@ spring:
           uri: http://127.0.0.1:9001
           order: 0
           predicates:
-            - Path=/webc/**
-          filters:
-            - StripPrefix=1
+            - Path=/web/**
+#          filters:
+#            - StripPrefix=1
 
 
 server:

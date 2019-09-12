@@ -15,4 +15,4 @@ docker tag ${REPO_NAME}/${IMAGE_NAME}:$TAG ${PRE_TAG}/${REPO_NAME}/${IMAGE_NAME}
 #rmi
 docker rmi ${REPO_NAME}/${IMAGE_NAME}:$TAG
 #push
-docker push ${PRE_TAG}/${REPO_NAME}/${IMAGE_NAME}:$TAG 
+docker push ${PRE_TAG}/${REPO_NAME}/${IMAGE_NAME}:$TAG
