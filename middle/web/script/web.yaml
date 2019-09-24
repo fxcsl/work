@@ -43,7 +43,7 @@ metadata:
   labels: 
     run: web
 spec: 
-  type: LoadBalancer
+  type: Nodeport
   ports: 
   - port: 38080
     nodePort: 31001

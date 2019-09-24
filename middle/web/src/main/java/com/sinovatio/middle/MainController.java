@@ -27,6 +27,19 @@ public class MainController {
 
     @RequestMapping("/")
     public String ribbonPing(HttpServletRequest request){
+        String uri = request.getRequestURI();//返回请求行中的资源名称
+        String url = request.getRequestURL().toString();//获得客户端发送请求的完整url
+        String ip = request.getRemoteAddr();//返回发出请求的IP地址
+        String params = request.getQueryString();//返回请求行中的参数部分
+        String host=request.getRemoteHost();//返回发出请求的客户机的主机名
+        int port =request.getRemotePort();//返回发出请求的客户机的端口号。
+
+        LOG.info("ip:"+ip);
+        LOG.info("url:"+url);
+        LOG.info("uri:"+uri);
+        LOG.info("params:"+params);
+        LOG.info("host:"+host);
+        LOG.info("port:"+port);
         LOG.info("hostName of {}", hostName);
         return "hello,web! this hostname is "+hostName;
     }

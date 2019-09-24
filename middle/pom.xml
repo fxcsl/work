@@ -166,12 +166,12 @@
         <repository>
             <id>releases</id><!-- 必须和server处的id一样 -->
             <name>Snapshots</name>
-            <url>http://10.45.136.151:8081/nexus/content/repositories/releases</url>
+            <url>http://162.168.2.141:8081/nexus/content/repositories/releases</url>
         </repository>
         <snapshotRepository>
             <id>snapshots</id><!-- 必须和server处的id一样 -->
             <name>Snapshots</name>
-            <url>http://10.45.136.151:8081/nexus/content/repositories/snapshots</url>
+            <url>http://162.168.2.141:8081/nexus/content/repositories/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 

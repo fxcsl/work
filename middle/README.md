@@ -11,7 +11,7 @@ mvn clean package -Pprod
 
 ```
 
-##update
+**update**
 ```$xslt
 kubectl set image deployment gateway gateway=162.162.2.141:1180/middle/gateway:1.0.1 --record=true
 

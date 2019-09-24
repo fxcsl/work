@@ -3,8 +3,8 @@ spring:
     name: service
 server:
   port: 9002
-  servlet:
-    context-path: /service
+#  servlet:
+#    context-path: /service
 
 
 logging:

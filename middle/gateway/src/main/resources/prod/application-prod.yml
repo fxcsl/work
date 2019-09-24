@@ -8,12 +8,18 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: webc
-#          uri: http://localhost:9000
+        - id: web
           uri: lb://web
           order: 0
           predicates:
-            - Path=/webc/**
+            - Path=/webweb/**
+          filters:
+            - StripPrefix=0
+        - id: service
+          uri: lb://service
+          order: 1
+          predicates:
+            - Path=/service/**
           filters:
             - StripPrefix=1
 

@@ -15,7 +15,7 @@
     <description>Demo project for gateway</description>
 
     <properties>
-        <springcloud.kubernetes.version>1.0.1.RELEASE</springcloud.kubernetes.version>
+        <springcloud.kubernetes.version>1.0.3.RELEASE</springcloud.kubernetes.version>
         <docker.image.prefix>162.168.2.141:1180/middle</docker.image.prefix>
     </properties>
 

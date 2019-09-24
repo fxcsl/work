@@ -1,10 +1,26 @@
 spring:
   application:
     name: web
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    cache: false
 server:
   port: 9001
   servlet:
-    context-path: /web
+    context-path: /notweb
+
+redis:
+  host: localhost
+  port: 6379
+  database: 1
+  lettuce:
+    pool:
+      max-active: 8
+      max-idle: 8
+      max-wait: -1ms
+      min-idle: 1
 
 
 logging:
@@ -12,6 +28,10 @@ logging:
     root: info
   path: /logs/${spring.application.name}-logs
   config: classpath:logback-core.xml
+
+resources: # 指定静态资源的路径
+  static-locations: classpath:/static/,classpath:/views/
+  cache-period: 0
 
 service:
   gateway: gateway

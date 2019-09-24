@@ -14,7 +14,7 @@
     <description>Demo project for web</description>
 
     <properties>
-        <springcloud.kubernetes.version>1.0.1.RELEASE</springcloud.kubernetes.version>
+        <springcloud.kubernetes.version>1.0.3.RELEASE</springcloud.kubernetes.version>
         <docker.image.prefix>162.168.2.141:1180/lixg/fxctest</docker.image.prefix>
     </properties>
 
@@ -54,8 +54,21 @@
             <artifactId>spring-messaging</artifactId>
         </dependency>
 
+        <!--redis -->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.session</groupId>-->
+<!--            <artifactId>spring-session-data-redis</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-pool2</artifactId>-->
+<!--        </dependency>-->
 
-
+        <!--热更新 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>

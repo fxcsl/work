@@ -8,14 +8,20 @@ spring:
           enabled: true
           lowerCaseServiceId: true
       routes:
-        - id: webc
-#          uri: lb://web
-          uri: http://127.0.0.1:9001
+        - id: web
+          uri: http://192.168.1.107:9001
           order: 0
           predicates:
-            - Path=/web/**
-#          filters:
-#            - StripPrefix=1
+            - Path=/notweb/**
+          filters:
+            - StripPrefix=0
+        - id: service
+          uri: http://127.0.0.1:9002
+          order: 1
+          predicates:
+            - Path=/service/**
+          filters:
+            - StripPrefix=1
 
 
 server:
@@ -30,5 +36,5 @@ logging:
 
 service:
   gateway: 127.0.0.1:9000
-  web: 127.0.0.1:9001
+  web: 127.0.0.1:9001/notweb
   service: 127.0.0.1:9002
