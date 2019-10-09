@@ -1,6 +1,11 @@
 spring:
   application:
     name: gateway
+  zipkin:
+    base-url: http://127.0.0.1:9003
+  sleuth:
+    sampler:
+      probability: 1
   cloud:
     gateway:
       discovery:
@@ -9,20 +14,19 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: web
-          uri: http://192.168.1.107:9001
+          uri: http://127.0.0.1:9001
           order: 0
           predicates:
-            - Path=/notweb/**
+            - Path=/preweb/**
           filters:
             - StripPrefix=0
         - id: service
           uri: http://127.0.0.1:9002
           order: 1
           predicates:
-            - Path=/service/**
+            - Path=/preservice/**
           filters:
             - StripPrefix=1
-
 
 server:
   port: 9000

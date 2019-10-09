@@ -17,7 +17,7 @@ public class DevConfig {
     }
 
     @Bean
-    Env env(){
+    Env env() {
         return new Env("dev");
     }
 

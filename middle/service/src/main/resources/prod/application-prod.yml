@@ -1,6 +1,18 @@
 spring:
   application:
     name: service
+  zipkin:
+    base-url: http://trace:38080/
+    #无k8sdiscovery模块故需要配置端口
+    #使用服务发现
+    #discoveryClientEnabled: true
+    #当前服务名称，不写默认取spring.application.name
+    #service:
+      #name: consumer02-sleuth
+  sleuth:
+    sampler:
+      probability: 1
+
 server:
   port: 9002
 #  servlet:

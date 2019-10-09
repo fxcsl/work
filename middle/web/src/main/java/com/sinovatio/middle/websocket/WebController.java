@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class WebController {
 
     @RequestMapping(value = "/websocket")
-    private String index(){
+    private String index() {
         return "websocket/index";
     }
 

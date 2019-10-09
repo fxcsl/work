@@ -17,7 +17,7 @@ public class ProdConfig {
     }
 
     @Bean
-    Env env(){
+    Env env() {
         return new Env("prod");
     }
 

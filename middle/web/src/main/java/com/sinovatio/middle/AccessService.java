@@ -21,26 +21,29 @@ public class AccessService {
 
     /**
      * 直接访问目标服务
+     *
      * @return
      */
-    @HystrixCommand(fallbackMethod = "getFallbackName" ,commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000") })
-    public String accessService(){
-        return this.restTemplate.getForObject("http://"+services.service+"/name", String.class);
+//    @HystrixCommand(fallbackMethod = "getFallbackName", commandProperties = {
+//            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")})
+    public String accessService() {
+        return this.restTemplate.getForObject("http://" + services.service + "/name", String.class);
     }
 
     /**
      * 直接访问目标服务
+     *
      * @return
      */
-    @HystrixCommand(fallbackMethod = "getFallbackName" ,commandProperties = {
-            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000") })
-    public String accessServiceFromGateway(){
-        return this.restTemplate.getForObject("http://"+services.gateway+"/service/name", String.class);
+    @HystrixCommand(fallbackMethod = "getFallbackName", commandProperties = {
+            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "1000")})
+    public String accessServiceFromGateway() {
+        return this.restTemplate.getForObject("http://" + services.gateway + "/preservice/name", String.class);
     }
 
     /**
      * 熔断时调用的方法
+     *
      * @return
      */
     private String getFallbackName() {

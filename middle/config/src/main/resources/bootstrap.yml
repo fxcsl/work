@@ -1,8 +1,8 @@
 spring:
   application:
     name: config
-#  profiles:
-#    active: development
+  #  profiles:
+  #    active: development
   cloud:
     kubernetes:
       config:

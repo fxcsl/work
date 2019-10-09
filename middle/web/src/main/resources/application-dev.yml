@@ -6,21 +6,27 @@ spring:
     suffix: .html
     mode: HTML5
     cache: false
+  zipkin:
+    base-url: http://127.0.0.1:9003
+  sleuth:
+    sampler:
+      probability: 1
+
 server:
   port: 9001
   servlet:
-    context-path: /notweb
+    context-path: /preweb
 
-redis:
-  host: localhost
-  port: 6379
-  database: 1
-  lettuce:
-    pool:
-      max-active: 8
-      max-idle: 8
-      max-wait: -1ms
-      min-idle: 1
+#redis:
+#  host: localhost
+#  port: 6379
+#  database: 1
+#  lettuce:
+#    pool:
+#      max-active: 8
+#      max-idle: 8
+#      max-wait: -1ms
+#      min-idle: 1
 
 
 logging:
@@ -36,5 +42,5 @@ resources: # 指定静态资源的路径
 
 service:
   gateway: 127.0.0.1:9000
-  web: 127.0.0.1:9001/web
-  service: 127.0.0.1:9002/service
+  web: 127.0.0.1:9001/notweb
+  service: 127.0.0.1:9002

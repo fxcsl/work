@@ -15,7 +15,7 @@
 
     <properties>
         <springcloud.kubernetes.version>1.0.3.RELEASE</springcloud.kubernetes.version>
-        <docker.image.prefix>162.168.2.141:1180/lixg/fxctest</docker.image.prefix>
+        <docker.image.prefix>10.45.136.151:1180/lixg/fxctest</docker.image.prefix>
     </properties>
 
     <dependencies>
@@ -28,6 +28,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
 
         <!--核心依赖项-->
@@ -53,20 +58,6 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-messaging</artifactId>
         </dependency>
-
-        <!--redis -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-data-redis-reactive</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.session</groupId>-->
-<!--            <artifactId>spring-session-data-redis</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.commons</groupId>-->
-<!--            <artifactId>commons-pool2</artifactId>-->
-<!--        </dependency>-->
 
         <!--热更新 -->
         <dependency>
@@ -232,14 +223,15 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <delete dir="../output/${project.artifactId}-${project.version}/config/" />
+                                <delete dir="../output/${project.artifactId}-${project.version}/config/"/>
                                 <copy todir="../output/${project.artifactId}-${project.version}/config/">
-                                    <fileset dir="target/${project.artifactId}-${project.version}-config/${profile.active}/">
+                                    <fileset
+                                            dir="target/${project.artifactId}-${project.version}-config/${profile.active}/">
                                         <!--                                    <fileset dir="target/${project.artifactId}-${project.version}-config/">-->
-                                        <include name="*.properties" />
-                                        <include name="*.yml" />
-                                        <include name="*.json" />
-                                        <include name="*.xml" />
+                                        <include name="*.properties"/>
+                                        <include name="*.yml"/>
+                                        <include name="*.json"/>
+                                        <include name="*.xml"/>
                                     </fileset>
                                 </copy>
                                 <copy todir="../output/${project.artifactId}-${project.version}/">

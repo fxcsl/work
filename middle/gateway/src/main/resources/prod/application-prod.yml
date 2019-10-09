@@ -1,6 +1,16 @@
 spring:
   application:
     name: gateway
+  zipkin:
+    base-url: http://trace/
+      #使用服务发现
+      #discoveryClientEnabled: true
+      #当前服务名称，不写默认取spring.application.name
+      #service:
+    #name: consumer02-sleuth
+  sleuth:
+    sampler:
+      probability: 1
   cloud:
     gateway:
       discovery:
@@ -12,14 +22,14 @@ spring:
           uri: lb://web
           order: 0
           predicates:
-            - Path=/webweb/**
+            - Path=/preweb/**
           filters:
             - StripPrefix=0
         - id: service
           uri: lb://service
           order: 1
           predicates:
-            - Path=/service/**
+            - Path=/preservice/**
           filters:
             - StripPrefix=1
 

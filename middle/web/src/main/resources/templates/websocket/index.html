@@ -3,7 +3,8 @@
 <head>
     <title>Hello WebSocket</title>
     <script th:inline="javascript">
-        var contextPath= [[@{/}]];
+        var contextPath = [[@{
+            /}]];
     </script>
     <link th:href="${#httpServletRequest.getContextPath()}+'/webjars/bootstrap/css/bootstrap.min.css'" rel="stylesheet">
     <link th:href="${#httpServletRequest.getContextPath()}+'/websocket/main.css'" rel="stylesheet">

@@ -1,6 +1,6 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
+metadata:
   name: service
   namespace: default
 spec:
@@ -13,20 +13,20 @@ spec:
       labels:
         run: service
     spec:
-      containers: 
-      - name: service
-        image: 162.168.2.141:1180/middle/service:1.0.0
-        imagePullPolicy: IfNotPresent
-        command: ["java"]
-        args: ["-Xbootclasspath/a:/config", "-jar", "/usr/local/app.jar"]
-        volumeMounts:
-          - name: config
-            mountPath: /config
-          - name: logs
-            mountPath: /logs
-        ports: 
-        - containerPort: 9002
-          protocol: TCP
+      containers:
+        - name: service
+          image: 10.45.136.151:1180/middle/service:1.0.0
+          imagePullPolicy: IfNotPresent
+          command: ["java"]
+          args: ["-Xbootclasspath/a:/config", "-jar", "/usr/local/app.jar"]
+          volumeMounts:
+            - name: config
+              mountPath: /config
+            - name: logs
+              mountPath: /logs
+          ports:
+            - containerPort: 9002
+              protocol: TCP
       volumes:
         - name: config
           configMap:
@@ -38,17 +38,17 @@ spec:
 ---
 apiVersion: v1
 kind: Service
-metadata: 
+metadata:
   name: service
-  labels: 
+  labels:
     run: service
-spec: 
-  type: Nodeport
-  ports: 
-  - port: 38080
-    nodePort: 31002
-    targetPort: 9002
-    protocol: TCP
-  selector: 
+spec:
+  type: NodePort
+  ports:
+    - port: 38080
+      nodePort: 31002
+      targetPort: 9002
+      protocol: TCP
+  selector:
     run: service
 

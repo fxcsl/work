@@ -9,7 +9,7 @@ spring:
           lowerCaseServiceId: true
       routes:
         - id: webc
-#          uri: http://localhost:9000
+          #          uri: http://localhost:9000
           uri: http://127.0.0.1:9001
           order: 0
           predicates:

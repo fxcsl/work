@@ -2,4 +2,4 @@
 kubectl apply -f gateway.yaml --record
 
 #update version
-#kubectl set image deployment gateway gateway=162.168.2.141:1180/middle/gateway:1.0.1
+#kubectl set image deployment gateway gateway=10.45.136.151:1180/middle/gateway:1.0.1

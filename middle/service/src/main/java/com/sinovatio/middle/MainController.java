@@ -19,13 +19,14 @@ public class MainController {
     private final String hostName = System.getenv("HOSTNAME");
 
     @RequestMapping("/")
-    public String home(){
+    public String home() {
         LOG.info("hostName of {}", hostName);
-        return "hello,service! this hostname is "+hostName;
+        return "hello,service! this hostname is " + hostName;
     }
 
     /**
      * 返回hostname
+     *
      * @return 当前应用所在容器的hostname.
      */
     @RequestMapping("/name")

@@ -25,7 +25,7 @@ public class BusPacketCheckFilter implements GatewayFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         String bus_service_id = request.getHeaders().getFirst("test");
         //不包含指定的header，返回400
-        if(bus_service_id == null || "".equals(bus_service_id.trim())){
+        if (bus_service_id == null || "".equals(bus_service_id.trim())) {
             exchange.getResponse().setStatusCode(HttpStatus.BAD_REQUEST);
             return exchange.getResponse().setComplete();
         }

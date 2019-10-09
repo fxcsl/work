@@ -6,22 +6,21 @@ spring:
     suffix: .html
     mode: HTML5
     cache: false
+  zipkin:
+    base-url: http://trace/
+    #使用服务发现
+    #discoveryClientEnabled: true
+    #当前服务名称，不写默认取spring.application.name
+    #service:
+      #name: consumer02-sleuth
+  sleuth:
+    sampler:
+      probability: 1
+
 server:
   port: 9001
   servlet:
-    context-path: /notweb
-
-redis:
-  host: localhost
-  port: 6379
-  database: 1
-  lettuce:
-    pool:
-      max-active: 8
-      max-idle: 8
-      max-wait: -1ms
-      min-idle: 1
-
+    context-path: /preweb
 
 logging:
   level:
